@@ -1,0 +1,42 @@
+
+#include<iostream>
+using namespace std;
+//
+const double PI = 3.14;
+
+class circle
+{
+	//首先要写明权限
+public:
+
+	//属性
+	int c_r;
+
+	//行为
+	int cululate()
+	{
+	
+		return 2 * PI * c_r;
+	
+	}
+
+};
+
+int main()
+{
+	//创建一个对象
+	circle c1;
+	c1.c_r = 10;
+
+	cout << "圆的面积为"
+		<< c1.cululate() << endl;
+
+
+
+
+
+
+
+	return 0;
+
+}
