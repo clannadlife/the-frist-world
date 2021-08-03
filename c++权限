@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+#include<string>
+
+class person
+{
+
+
+
+	//年龄只读不写
+	//情人只写不读
+	
+
+
+private:
+
+	int m_Age;
+	string m_Name;
+	string m_Lover;
+public:  //姓名可读可写
+	void setName(string name)
+	{
+		m_Name = name;
+
+
+	}
+	string getName()
+	{
+
+		return m_Name;
+
+
+
+	}
+	//不给他提供接口就可以达到目的了
+	void setAge(int age)
+	{
+		if (age < 0 || age>150)
+		{
+			m_Age = 0;
+			cout << "年龄输入错误" << endl;
+
+
+			return;
+		}
+		m_Age = age;
+	
+	
+	}
+	int getAge()
+	{   
+		return m_Age;
+	
+	}
+
+};
+
+int main()
+{
+	
+	person p1;
+	p1.setName("张三");
+	cout << "姓名为：" << p1.getName() << endl;
+
+	p1.setAge(1999);
+	cout << "年龄为：" << p1.getAge() << endl;
+
+
+
+	return 0;
+
+}
